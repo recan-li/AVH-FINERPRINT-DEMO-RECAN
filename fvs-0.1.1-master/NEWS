@@ -1,0 +1,80 @@
+------------------------------------------------------------------------------
+New in release 0.1.1
+------------------------------------------------------------------------------
+
+Thanks to Ken Adams for detecting these problems:
+ o fixed extern "C" added for C++ integration
+ o fixed array allocation in image_manip.c that does not work on some
+   compilers (the use of 2D arrays with 2 variable sizes is not standard)
+
+------------------------------------------------------------------------------
+New in release 0.1.0
+------------------------------------------------------------------------------
+
+ o improvment in the direction determination
+ o improvment in the gabor filter parameter, added radius in function
+ o better demo programs by bluring the input image before computing
+ o less destructive thinning, the spurious line removal did remove
+   completely some lines oriented in a special way.
+ o removed the mask computation as it did not work reliabely
+ o added support for more than 40 image formats thanks ImageMagick
+
+
+------------------------------------------------------------------------------
+New in release 0.0.9
+------------------------------------------------------------------------------
+
+Thanks to Tony Xu:
+ o improvment in the thinning algorithm that produces much more
+   reliable results by removing spurious pixels.
+
+Thanks to Chris Kuethe:
+ o fixed a portability issue, stdint.h or inttypes.h in fvstypes.h
+ o fixed a compilation issue in ImageFlood. 
+
+
+------------------------------------------------------------------------------
+New in release 0.0.8
+------------------------------------------------------------------------------
+
+Fixed 2 critical bugs in Import of 8 bit RLE compressed bitmaps and in
+the gabor filtering.
+Enhanced Minutia extraction by removing resembling minutia from the set.
+
+
+------------------------------------------------------------------------------
+New in release 0.0.7
+------------------------------------------------------------------------------
+
+Support for splint (static semantic checking, allows to detect common
+programming errors while using the library)
+Changes in the API, cleaning up and removed non implemented code,
+concerning mainly the matching part.
+
+
+------------------------------------------------------------------------------
+New in release 0.0.4
+------------------------------------------------------------------------------
+
+Experimental Minutia extraction
+Still lacks a mask detection and removal of falsly detected minutia.
+
+
+------------------------------------------------------------------------------
+New in release 0.0.3
+------------------------------------------------------------------------------
+
+Correct thinning algorithms
+Fix in installation of header files
+
+
+------------------------------------------------------------------------------
+New in release 0.0.2
+------------------------------------------------------------------------------
+
+HTML help files
+Some demo programs
+A new directory tree
+Changes in the API types
+and ... some small bug fixes
+

@@ -4,6 +4,7 @@ USER_CONFIG_PATH    := config
 OUT_PATH            := out
 AVH_SIMLIMIT_TIME   := 8000
 SHELL 				:= /bin/bash
+V  					?= 0
 
 all: source clean build run
 
@@ -29,7 +30,7 @@ source:
 build:
 	@echo "Building ..."
 	@test -e $(OUT_PATH) || mkdir -p $(OUT_PATH)
-	cbuild --packs $(AVH_DEMO_PATH)/VHT_MPS2_Cortex-M7.cprj --update-rte
+	cbuild --packs $(AVH_DEMO_PATH)/VHT_MPS2_Cortex-M7.cprj --update-rte -v=$(V)
 	@cp -rf $(AVH_DEMO_PATH)/Objects/image.elf $(OUT_PATH)
 
 run:

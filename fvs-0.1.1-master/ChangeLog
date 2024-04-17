@@ -1,0 +1,29 @@
+
+|---------|-----|------------------------------------------------------|
+|  datum  | who |               what                                   |
+|---------|-----|------------------------------------------------------|
+2003 02 16  jdh  finished first version of image enhancement part
+2003 02 20  jdh  added doxygen help support
+2003 02 22  jdh  Added autoconf and automake support to the package
+2003 02 25  jdh  float field added, new demo program fvs_direction
+2003 02 28  jdh  fixed installation of header files
+2003 03 15  jdh  Added fvs_minutia
+2003 03 16  jdh  Some fixes in enhance1.c and header files
+2003 03 21  jdh  Moved frequency computation to a public function
+2003 03 22  jdh  Renamed ImageEnhance1 into ImageEnhanceGabor
+                 New look for the documentation (CSS file)
+2003 03 23  jdh  Masking and demo program fvs_mask added
+2003 03 24  jdh  Stronger typing and introduction of image flags
+                 Updated morphology operators, cleaned up matching
+2003 04 12  jdh  small fixes in the API
+2003 05 09  jdh  changed allocation/destruction functions...
+2003 05 10  jdh  added support for splint (/*@...@*/) directives
+2003 05 11  jdh  fixed bugs (Import8RLE and Gabor filtering)
+2003 05 11  jdh  Cleaning of the minutia set using given rules
+2003 05 29  jdh  Added contribution from Tony Xu that improves thinning
+2003 11 30  jdh  Made some corrections in the Direction and Gabor filter
+                 parts. Image enhancement works slower but better.
+2003 12 20  jdh  Support of importing and exporting from/to many formats
+                 by using the ImageMagick library.
+2004 03 12  jdh  A few fixes for C++ integration and a bug with arrays
+

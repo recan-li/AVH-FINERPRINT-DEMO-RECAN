@@ -24,7 +24,7 @@
   <target Ddsp="NO_DSP" Dendian="Little-endian" Dfpu="DP_FPU" Dmve="NO_MVE" Dname="CMSDK_CM7_DP_VHT" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="ARM:82">
     <output intdir="./Objects/" name="image" outdir="./Objects/" type="exe"/>
     <ldflags add="--no_debug --remove --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers --entry=Reset_Handler" compiler="AC6" file="./RTE/Device/CMSDK_CM7_DP_VHT/ac6_arm.sct"/>
-    <cflags add="-save-temps=obj -O1 -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-4 -std=c99 -xc" compiler="AC6"/>
+    <cflags add="-save-temps=obj -D__FPU_USED=1 -D__TARGET_FPU_VFP=1 -DARM_MATH_CM7=1 -O1 -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -ffunction-sections -fdata-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-4 -std=c99 -xc -mfloat-abi=hard" compiler="AC6"/>
     <asflags compiler="AC6" use="armasm"/>
     <includes>./Board/VHT_MPS2_Cortex-M7</includes>
     <defines>configENABLED_NETWORKS=AWSIOT_NETWORK_TYPE_ETH</defines>
@@ -63,9 +63,26 @@
       <file category="sourceC" name="./Board/VHT_MPS2_Cortex-M7/retarget_stdio.c"/>
     </group>
 
-    <group name="finger_print">
-      <cflags add="-I ../finger_print/include -I ../finger_print/finger_print_pictures -include win2linux.h -DCFG_USE_C_ONLY=1 -DCFG_ENABLE_LOWER_RAM=1 -DCFG_USE_BMP_H=1 -Wno-macro-redefined" compiler="AC6"/>
-      <file category="sourceC" name="../finger_print/src/SyntFinger.c"/>
+    <group name="fvs-0.1.1-master">
+      <cflags add="-I ../fvs-0.1.1-master/include -I ../fvs-0.1.1-master/fingerprint_bitmaps -I/home/ubuntu/packs/ARM/CMSIS/5.9.0/CMSIS/DSP/Include/ -DCFG_NON_MAGICK_API=1 -DCFG_MATCHING_V1=0 -DCFG_ENHANCEGABOR_DISABLE=1 -DCFG_ENABLE_LOWER_RAM=1 -DCFG_USE_BMP_H=1 -DCFG_DISABLE_MAIN_FUNCTION=1 -DCFG_ARM_MATH_ENABLE=1 -Wno-macro-redefined" compiler="AC6"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/demos/fvs_matching.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/bmp.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/export.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/file.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/floatfield.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/histogram.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/image.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/imagemanip.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/img_base.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/img_enhance1.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/img_morphology.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/img_thin3.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/import.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/matching.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/matching2.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/minutia.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/version.c"/>
+      <file category="sourceC" name="../fvs-0.1.1-master/src/version.c"/>
     </group>
     
   </files>

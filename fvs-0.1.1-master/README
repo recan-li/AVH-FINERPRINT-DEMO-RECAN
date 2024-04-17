@@ -1,0 +1,100 @@
+##########################################################################
+
+  See the file COPYING to get detailed LICENSING information
+
+  Copyright(C) 2002-2003. All Rights Reserved.
+
+  Authors: Jaap de Haan  (jdh - binaryman) - FVS  C
+           Shivang Patel (sp  - shivangp ) - FVS2 C++
+  
+##########################################################################
+
+This README file concerns the FVS project only.
+
+FVS is written in C and uses data encapsulation and object oriented
+programming techniques so that porting to C++ or other object oriented
+languages becomes easier.
+
+Once compiled, the libfvs library functions can be used to create
+other programs based on it. Both the static and dynamic libraries
+are generated.
+
+Fingerprint images may be found in the Internet at various places if
+you don't have a fingerprint scanner. On the FVS homepage you will
+also find a ZIP file containing many bitmaps for testing purposes.
+
+
+
+
+SOME DEMO PROGRAMS
+------------------
+
+------------------------------------------------------------------------------
+fvs_enhancer is a fingerprint enhancer program that demonstrates how to
+use the library to enhance a fingerprint image. The source image and the
+destination image are both bitmaps. The first stage of the library, the
+enhancement is the only one that works well and is completely useable.
+We are currently working on the other stages.
+
+------------------------------------------------------------------------------
+fvs_direction is a demonstration that takes a fingerprint image as input.
+This fingerprint image should be normalized for best resuts. The output
+of this program is another image containing a direction field and the
+original fingerprint image in the background.
+
+------------------------------------------------------------------------------
+fvs_createtestimages is a program that generates a few bitmaps that may be
+used for debugging purposes. It generates images with stripes in different
+directions and different spacings. The filename is build following the
+principles:
+    testimgSSSDDD.bmp
+where SSS represents the spacing in pixels between two lines and
+where DDD represents the direction in degrees.
+
+------------------------------------------------------------------------------
+fvs_thinner demonstrates how to obtain a thinned image from a fingerprint
+image. The thinned image should represent as close as possible the ridge
+profile of the fingerprint.
+
+------------------------------------------------------------------------------
+fvs_minutia shows how to get the minutia out of a fingerprint image. This
+part still needs some work in order to work well. Many minutia are detected
+where only a few are really true minutia. Some more hours are needed in
+the algorithmic here...
+
+------------------------------------------------------------------------------
+fvs_mask displays the region of interest mask that is computed around a
+fingerprint image. This part lacks still some features... A structural
+operator should eliminate holes in the mask and we should also remove the
+border of the fingerprint as minutia in this region cannot be good to use.
+
+
+
+BUILDING THE SOURCE
+-------------------
+
+
+
+when in the project directory type
+  ./configure
+  make
+  make install
+
+you need a working compiler, make and linker as well as up to date
+autoconf and automake. Make install will install all in the default
+prefix /usr/local. If you want to install FVS into another library,
+use the --prefix parameter when running the configure script. See
+./configure --help for more details about what options are suppported.
+
+
+The documentation may be generated with doxygen. In the doc subdirectory
+type in
+
+  cd ./doc
+  doxygen
+
+and it will be generated in subdirectories of ./doc
+
+
+
+

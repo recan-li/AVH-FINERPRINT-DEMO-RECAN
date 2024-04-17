@@ -1,0 +1,260 @@
+
+/* validate using http://jigsaw.w3.org/css-validator/ */
+
+body
+{
+    margin          : 0px;
+    background-color: white;
+}
+
+/************ HEADER ************/
+div.header
+{
+    background-color: #0855C5;
+    background-image: url("../images/headerbg.png");
+}
+div.header table
+{
+    padding: 0px;
+    margin : 0px;
+}
+div.header table tr td h1
+{
+    color      : white;
+    font       : bold 20pt courier;
+    padding-top: 0.5em;
+}
+
+/************ TABLES ***********/
+table.links
+{
+    float            : right;
+    border           : 0;
+    padding-left     : 1px
+}
+table.links td a
+{
+    color            : white
+}
+table.links td:hover a:hover
+{
+    color            : white;
+    background-color : #0C4293;
+}
+table.links td
+{
+    border-left      : solid 1px #4A81D5;
+    padding          : 0px 12px 0px 12px;
+    background-color : #0E4EAF;
+    font-size        : 9pt;
+}
+
+div.hgrad
+{
+    height           : 12px;
+    background-image : url("../images/gradient.png");
+}
+div.text
+{
+    width            : 95%;
+    margin           : 12px;
+}
+H1
+{
+    text-align       : center;
+}
+CAPTION
+{
+    font-weight      : bold
+}
+A.qindex
+{
+}
+A.qindexRef
+{
+}
+A.el
+{
+    text-decoration  : none;
+    font-weight      : bold;
+}
+A.elRef
+{
+    font-weight      : bold;
+}
+A.code
+{
+    text-decoration  : none;
+    font-weight      : normal;
+    color            : #4444ee;
+}
+A.codeRef
+{
+    font-weight      : normal;
+    color            : #4444ee;
+}
+A:hover
+{
+    text-decoration  : none;
+    color            : red;
+}
+dl.el
+{
+    margin-left      : -1cm;
+}
+div.fragment
+{
+    width            : 100%;
+    border           : none;
+    background-color : #ffffee;
+    padding          : 12px;
+}
+div.ah
+{
+    background-color : navy;
+    font-weight      : bold;
+    color            : #ffffff;
+    margin-bottom    : 3px;
+    margin-top       : 3px;
+}
+td.md
+{
+    font-weight      : bold;
+    color            : black;
+}
+div.text table
+{
+    width            : 98%;
+}
+table tr p
+{
+    background-color : #ffffee;
+    color            : black;
+    margin-left      : 3%;
+    margin-right     : 3%;
+    padding          : 1em;
+    border           : solid 1px black;
+}
+
+table tr td dl
+{
+    background-color : #eeeecc;
+    color            : black;
+    margin-left      : 5%;
+    margin-right     : 5%;
+    padding          : 1em;
+    border           : solid 1px black;
+}
+
+td.md table
+{
+    background-color : #eeeeff;
+    margin-left      : 1%;
+    margin-right     : 1%;
+    padding          : 1em;
+    font-weight      : bold;
+    color            : black;
+    width            : 98%;
+    border           : solid 2px #aaaadd;
+}
+td.mdname1
+{
+    font-weight      : bold;
+    color            : #602020;
+}
+td.mdname
+{
+    font-weight      : bold;
+    color            : #602020;
+}
+div.groupHeader
+{
+    margin-left      : 16px;
+    margin-top       : 12px;
+    margin-bottom    : 6px;
+    font-weight      : bold;
+}
+div.groupText
+{
+    margin-left      : 16px;
+    font-style       : italic;
+    font-size        : smaller
+}
+body
+{
+    background       : white;
+}
+td.indexkey
+{
+    background-color : #e0eef8;
+    font-weight      : bold;
+    padding-right    : 10px;
+    padding-top      : 2px;
+    padding-left     : 10px;
+    padding-bottom   : 2px;
+    margin-left      : 0px;
+    margin-right     : 0px;
+    margin-top       : 2px;
+    margin-bottom    : 2px;
+}
+td.indexvalue
+{
+    background-color : #e0eef8;
+    font-style       : normal;
+    padding-right    : 10px;
+    padding-top      : 2px;
+    padding-left     : 10px;
+    padding-bottom   : 2px;
+    margin-left      : 0px;
+    margin-right     : 0px;
+    margin-top       : 2px;
+    margin-bottom    : 2px;
+}
+font.keyword
+{
+    color: #008000;
+}
+font.keywordtype
+{
+    color: #604020;
+}
+font.keywordflow
+{
+    color: #e08000;
+}
+font.comment
+{
+    color: #800000;
+}
+font.preprocessor
+{
+    color: #806020;
+}
+font.stringliteral
+{
+    color: #002080;
+}
+font.charliteral
+{
+    color: #008080;
+}
+div.bottom-nav
+{
+    position         : relative;
+    background-color : transparent;
+    margin-top       : 12px;
+    height           : 50px;
+    background-image : url('../images/bottombg.png');
+    background-repeat: repeat-x;
+}
+div.bottom
+{
+    margin           : 12px;
+    font-size        : 9pt;
+    text-align       : right;
+}
+div.bottom a
+{
+    color            : #aaaaaa;
+}
+

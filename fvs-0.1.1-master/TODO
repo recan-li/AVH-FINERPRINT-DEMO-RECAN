@@ -1,0 +1,32 @@
+
+
+DOCUMENTATION
+
+
+ LOGO for the FVS library (Contributors wanted!)
+ 
+
+
+LIBRARY
+
+ Minutia extraction
+  - Eliminate minutia that are near each other and having the
+    same direction.
+    
+ Create a better mask determination algorithm
+ 
+ Use poincare index to detect core points
+ 
+ Implement the matching part
+
+
+DEMOS
+
+
+ Include some GUI demos based on GTK or QT to
+ demonstrate the effect of the API functions in
+ an interactive way. Due to lack of time this will
+ be done later on, when the library will be OK.
+ 
+ 
+ 

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+doxygen
+
+cp doxygen.css html
+
