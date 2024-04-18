@@ -21,11 +21,12 @@ This is an ARM based AVH mirror simulation Cortex-M7 chip platform for building 
 │   └── VHT_MPS2_Cortex-M7.uvprojx 				# MDK project file
 ├── cmake
 │   └── CMSIS-Build-Utils.cmake 				# Cmake config file
-├── finger_print
-│   ├── build.sh 								# Build script for finger_print project only
-│   ├── finger_print_pictures 					# Test finger_print_pictures
-│   ├── include 								# Include files for finger_print component
-│   └── src 									# Source files for finger_print component
+├── fvs-0.1.1-master
+│   ├── build.sh 								# Build script for fvs-0.1.1-master project only
+│   ├── fingerprint_bitmaps 					# Test fingerprint_bitmaps
+│   ├── include 								# Include files for fvs-0.1.1-master component
+│   └── src 									# Source files for fvs-0.1.1-master component
+│   └── demos 									# Some demos for fvs-0.1.1-master component
 ├── LICENSE 									# The LICENSE for this project
 ├── Makefile									# Makefile for project building
 └── README.md									# This readme file
