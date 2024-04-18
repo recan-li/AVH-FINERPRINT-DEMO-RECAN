@@ -256,5 +256,7 @@ int main(int argc, const char *argv[])
     printf("---                  OK: %2d FAIL: %2d                    ---\n", matched_ok, matched_fail);
     printf("-----------------------------------------------------------\n");
 
+    exit(0); // exit app now !
+
     return 0;
 }
