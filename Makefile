@@ -5,6 +5,7 @@ OUT_PATH            := out
 AVH_SIMLIMIT_TIME   := 8000
 SHELL 				:= /bin/bash
 V  					?= 0
+TARGET_FILE_SUFFIX 	:= axf
 
 all: source clean build run
 
@@ -30,12 +31,12 @@ source:
 build:
 	@echo "Building ..."
 	@test -e $(OUT_PATH) || mkdir -p $(OUT_PATH)
-	cbuild --packs $(AVH_DEMO_PATH)/VHT_MPS2_Cortex-M7.cprj --update-rte -v=$(V)
-	@cp -rf $(AVH_DEMO_PATH)/Objects/image.elf $(OUT_PATH)
+	cbuild --packs $(AVH_DEMO_PATH)/VHT_MPS2_Cortex-M7.cprj
+	@cp -rf $(AVH_DEMO_PATH)/Objects/image.$(TARGET_FILE_SUFFIX) $(OUT_PATH)
 
 run:
 	@echo "Running ..."
-	/opt/VHT/bin/FVP_MPS2_Cortex-M7 --stat --simlimit $(AVH_SIMLIMIT_TIME) -f $(AVH_DEMO_PATH)/vht_config.txt $(OUT_PATH)/image.elf
+	/opt/VHT/bin/FVP_MPS2_Cortex-M7 --stat --simlimit $(AVH_SIMLIMIT_TIME) -f $(AVH_DEMO_PATH)/vht_config.txt $(OUT_PATH)/image.$(TARGET_FILE_SUFFIX)
 
 clean:
 	@echo "Clean ..."
